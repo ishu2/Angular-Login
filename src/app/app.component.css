@@ -1,0 +1,18 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14 Mar, 2018, 9:00:50 PM
+    Author     : Ishita
+*/
+
+    .bs-example{
+    	margin: 20px;
+    }
+	/* Fix alignment issue of label on extra small devices in Bootstrap 3.2 */
+    .form-horizontal .control-label{
+        padding-top: 7px;
+    }
+    .

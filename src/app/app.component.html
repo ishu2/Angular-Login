@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<h1 style="text-align: center">Login</h1>
+<div class="container">
+     <div class="col-sm-6 col-sm-offset-3">
+         <div class="jumbotron text-center" style="background-color: blanchedalmond;">
+         
+
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+        <div class="form-group">
+            
+            <input class="form-control" type="text" #nameRef="ngModel" required minlength="4" name="username" placeholder="username" ngModel>
+            <div *ngIf="nameRef.errors && (nameRef.dirty || nameRef.touched)" class="alert alert-danger">
+                <div [hidden]="!nameRef.errors.required">
+                    Please enter your username/email
+                </div>
+                <div [hidden]="!nameRef.errors.minlength">
+                    Please enter atleast 4 characters
+                </div>
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="password" ngModel>
+        </div>
+        
+        <div class="form-group">
+            <button [disabled]="!userForm.form.valid" class="btn btn-lg btn-primary btn-block">Login</button>
+            
+        </div>
+    </form>
+    <a href="/">Go Back</a>
+</div>
+</div>
+</div>
+<login></login>
